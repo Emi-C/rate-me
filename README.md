@@ -1,7 +1,7 @@
-#**React+SCSS and SERVER boilerplate**
+# **React+SCSS and SERVER boilerplate**
 
-#How to start
-open bash and clone repo
+# How to start
+open bash and clone repo  
 ```
 git clone  https://github.com/Emi-C/react-server-boilerplate.git
 cd react-server-boilerplate
@@ -24,33 +24,33 @@ If everything is fine, you should display this
 ![alt text](http://i67.tinypic.com/11r83f8.png "Working App")
 
 
-#How it's made
-##**CLIENT**
-The client is based on the create-react-app repo:
-the additional modules installed are:
-  node-sass  
-  npm-run-all
+# How it's made
+## **CLIENT**
+The client is based on the create-react-app repo:  
+the additional modules installed are:  
+  1. **node-sass**  
+  2. **npm-run-all**  
 to respectively include a scss compiler and watch updates on the scss (and rebuild) along with updates to the js app itself
 
-*Complete variations from create-react-app:*
+*Complete variations from create-react-app:*  
 ```
 npm install node-sass --save-dev
 npm install npm-run-all --save-dev
 ```
-edit package.json
-  - start&build replaced by
+edit package.json  
+  - start&build replaced by  
   ```
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
   ```
-  - add
+  - add  
   ```
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
   ```
 
-Additionally, to display the server results I edited App.js like this
+Additionally, to display the server results I edited App.js like this  
 ```
 class App extends Component {
   constructor(props) {
@@ -86,12 +86,12 @@ class App extends Component {
 }
 ```
 
-##**SERVER**
-The server is based on the react-backend express package:
+## **SERVER**
+The server is based on the react-backend express package:  
 ```
 express react-backend
 ```
-For the boilerplate example results I edited the `routes/users.js` file like this
+For the boilerplate example results I edited the `routes/users.js` file like this  
 ```
 var express = require('express');
 var router = express.Router();
@@ -111,7 +111,7 @@ module.exports = router;
 ```
 
 
-#Sources & Inspiration
-[Create React App Repository](https://github.com/facebookincubator/create-react-app "Create React App")
-[Express react-backend package](https://expressjs.com/en/starter/generator.html "Lack of better official source")
-[Put together server and client](https://daveceddia.com/create-react-app-express-backend/ "Create React App with an Express Backend")
+# Sources & Inspiration  
+[Create React App Repository](https://github.com/facebookincubator/create-react-app "Create React App")  
+[Express react-backend package](https://expressjs.com/en/starter/generator.html "Lack of better official source")  
+[Put together server and client](https://daveceddia.com/create-react-app-express-backend/ "Create React App with an Express Backend")  
