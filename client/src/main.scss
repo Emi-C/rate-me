@@ -1,0 +1,133 @@
+$bp:490px;
+$bpsmmob:360px;
+$red:#E30613;
+$ok:#009626;
+
+$theme1:#ff5e62;
+$theme2:#ff9966;
+html{
+  font-size:15px;
+}
+body{
+  margin:0;
+  height:100vh;
+  width:100vw;
+  overflow: hidden;
+  font-family: Montserrat,calibri,sans-serif;
+}
+p,ul,li,a,span{
+  color:#333;
+  font-size:1rem;
+}
+div{
+  box-sizing: border-box;
+}
+
+.outerbg{
+  position:fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  display:none;
+  z-index: 0;
+  background: #C9D6FF; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #C9D6FF, #E2E2E2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #C9D6FF, #E2E2E2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.main{
+  position:relative;
+  box-sizing: border-box;
+  text-align: center;
+  width:100vw;
+  height:100vh;
+  padding:15px;
+  background: $theme1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(131deg, $theme1, $theme2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(131deg, $theme1,$theme2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+@media (min-width: $bp){
+  .outerbg{
+    display:block;
+  }
+  .main{
+    margin:auto;
+    margin-top:calc((100vh - 615px)/2);
+    width:380px;
+    height:625px;
+    border:10px solid #fafafa;
+    border-radius:10px;
+    box-shadow:0px 10px 25px #777;
+  }
+}
+
+@media (min-width: $bpsmmob){
+  .maincont{
+    margin-top:30px;
+  }
+}
+
+//top
+.top{
+  text-align: left;
+  height:50px;
+  margin:-15px;
+  margin-bottom:0;
+  padding:10px;
+  box-sizing: border-box;
+  background:rgba(220,220,220,.7);
+}
+
+.top .logo{
+  height:30px;
+  float:left;
+  display: inline-block;
+}
+.top .user{
+  float:right;
+  display: inline-block;
+}
+.user p{
+  font-size:.7rem;
+}
+.user p,.user span{
+  margin:0;
+  color:#fafafa;
+  font-weight: 400;
+}
+//top
+
+//nav
+.botnav{
+  height:40px;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#dadada;
+  //box-shadow: 0px 0px 15px #333;
+  box-sizing: border-box;
+}
+@media (min-width: $bpsmmob){
+  .botnav{
+    position:absolute;
+  }
+}
+.botnavitem{
+  width:24.9%;
+  display: inline-block;
+  padding:10px;
+  box-sizing: border-box;
+  color:#333;
+  cursor:pointer;
+}
+.botnavitem:not(:first-child){
+  border-left: 1px solid #777;
+}
+.botnavitem.active{
+  color:$theme1;
+}
+.botnavitem.active i{
+  text-shadow: 0px 0px 1px $theme2;
+}
+//nav
