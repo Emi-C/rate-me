@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Profile extends React.Component {
+export default class Shop extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +13,7 @@ export default class Profile extends React.Component {
     return (
       <div>
         <div className="profdiv">
-          <h1>PROFILE</h1>
+          <h1>SHOP</h1>
         </div>
       </div>
     );
