@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -9,16 +8,11 @@ export default class Login extends React.Component {
   render() {
     return (
       <div className="logdiv">
-        <div className="logtit">LOGIN MASK</div>
-        {/*()=>{
-          if (!isAuthenticated()){
-            return (<div className="btn" onClick={() => login()}>login</div>);
-          }else{
-            return (<div className="btn" onClick={() => logout()}>logout</div>);
-          }
-        }*/}
-        <Link className="botnavitem" to="/login/facebook">aaa</Link>
-
+        <div className="logmask">
+          <div className="logtit">Login</div>
+          <div className="btn fb">Login with Facebook <i className="fa fa-facebook"></i></div>
+          <div className="btn ggl">Login with Google <i className="fa fa-google"></i></div>
+        </div>
       </div>
     );
   }

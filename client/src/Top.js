@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './img/logo.png';
+import {Link} from 'react-router-dom';
 
 export default class Top extends React.Component {
   constructor(props) {
@@ -8,14 +9,13 @@ export default class Top extends React.Component {
   render() {
     return (
       <div className="top">
-        <img className="logo" src={logo} alt="logo"/>
+        <Link to="/login"><img className="logo" src={logo} alt="logo"/></Link>
         <div className="user">
-
-          <span className="fa-stack fa-lg">
+          {/*<span className="fa-stack fa-lg">
             <i className="fa fa-circle-o fa-stack-2x"></i>
             <i className="fa fa-user fa-stack-1x"></i>
-          </span>
-
+          </span>*/}
+          <i className="fa fa-cog fa-lg"></i>
         </div>
       </div>
     );
